@@ -40,14 +40,13 @@ video.addEventListener("click", ()=>{
     transform:"scaleX(0.7) scaleY(0)",
     opacity:0,
     borderRadius:"30px",
-    duration:0.5
-    
+    duration:0.5 
   })
 })
 }
 page3animation();
-
-var sections =document.querySelectorAll(".sec-right");
+function page3videoanimation(){
+  var sections =document.querySelectorAll(".sec-right");
 sections.forEach((elem)=>{
   elem.addEventListener("mouseenter",()=>{
     elem.childNodes[3].style.opacity=1;
@@ -64,3 +63,76 @@ sections.forEach((elem)=>{
     
   )
 })
+}
+page3videoanimation();
+
+
+function page6animation(){
+  gsap.from("#btm6-part2 h4",{
+  x:0,
+  duration:1,
+  scrollTrigger:{
+    trigger:"#btm6-part2",
+    scroller:"body",
+   // markers:true,
+    start:"top 50%",
+    end:"top 10%",
+    scrub:true
+  }
+})
+}
+page6animation();
+function page6animationn(){
+  gsap.from("#btm6-part3 h4",{
+  x:0,
+  duration:1,
+  scrollTrigger:{
+    trigger:"#btm6-part3",
+    scroller:"body",
+   // markers:true,
+    start:"top 50%",
+    end:"top 10%",
+    scrub:true
+  }
+})
+}
+page6animationn();
+function page6animationnn(){
+  gsap.from("#btm6-part4 h4",{
+  x:0,
+  duration:1,
+  scrollTrigger:{
+    trigger:"#btm6-part4",
+    scroller:"body",
+   // markers:true,
+    start:"top 50%",
+    end:"top 10%",
+    scrub:true
+  }
+})
+}
+page6animationnn();
+function loadingpage1(){
+  var tl=gsap.timeline()
+tl.from("#page1",{
+  opacity:0,
+  duration:0.3,
+  delay:0.2
+})
+tl.from("#page1",{
+  transform:"scaleX(0.7) scaleY(80%)",
+  borderRadius:"100px",
+  duration:2,
+  ease:"expo.out"
+})
+tl.from("nav ",{
+  opacity:0,
+  delay:-0.2
+})
+tl.from("#page1 h1,#page1 p ,#page1 div",{
+  opacity:0,
+  duration:0.5,
+  stagger:0.2
+})
+}
+loadingpage1();
